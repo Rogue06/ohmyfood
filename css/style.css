@@ -1,3 +1,16 @@
-.icon-location {
-    color: blue;
+/*colors: 
+Primary : #9356DC (Purple)
+Secondary : #FF79DA (Pink)
+Tertiary : #99E2D0 (Green)
+*/
+
+/*html * {
+    font-family: roboto, sans serif;
+    padding: 0;
+    margin: 0;
+
+} */
+
+.restaurant__container img {
+    width: 100%;
 }

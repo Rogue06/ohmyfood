@@ -10,25 +10,96 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="main-container">
+    <div class="main__container">
         <header>
             <div class="logo">
                 <img src="./images/logo/ohmyfood.png" alt="logo">
             </div>
-            <div class="location-container">
-                <div class="icon-location">
+            <!--search restaurant-->
+            <div class="location__container">
+                <div class="location__icon">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span class="text-after-icon">
-                    Paris, Belleville
-                    </span>
+                        <input type="search" name="restaurant-location" id="restaurant-location" placeholder="Paris, Belleville">
                 </div>
             </div>
+</header>
+<!--Explore restaurant-->
+        <main>
+            <section class="section__book">
+                <div class="book__container">
+                    <div class="book__title">
+                        <h2>Réservez le menu qui
+                        vous convient</h2>
+                    </div>
+                        <span class="book__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</span>
 
-            <nav>
+                    <button class="book__button">Explorer nos restaurants</button>
+                </div>
+            </section>
+        </main>
 
-            </nav>
-        </header>
+<!--instructions-->
+        <section class="instructions">
+            <div class="instructions__title">
+<h2>Fonctionnement</h2>
+            </div>
+            <div class="steps__container">
+                <div class="step__one">
+                    <div class="step__number">
+                        <div class="step__iconandtxt">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span class="step__text">
+                            Choisissez un restaurant
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="step__two">
+                    <div class="step__number">
+                        <div class="step__iconandtxt">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span class="step__text">
+                            Composez votre menu
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step__three">
+                    <div class="step__number">
+                        <div class="step__iconandtxt">
+                            <i class="fa-solid fa-store"></i>
+                            <span class="step__text">
+                            Dégustez au restaurant
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <div class="restaurants__title">
+                <h2>Restaurants</h2>
+            </div>
+
+            <div class="cards-restaurant__container">
+                <a href="#">
+                    <article class="restaurant__container">
+                        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo la palette du goût restaurant Ménilmontant">
+                        <div class="card__content">
+                            <div class="card__text">
+                                <h3 class="card__title">La palette du goût</h3>
+                                <p class="card__subtitle">Ménilmontant</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
             <footer>
 
             </footer>
