@@ -29,7 +29,6 @@ html {
 }
 
 .location__container {
-
     padding: 20px;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
@@ -38,15 +37,15 @@ html {
 }
 
 
-#restaurant-location input[type="search"] {
+.search-bar input[type="search"] {
     border: none;
 }
 
-#restaurant-location input[type="search"]::placeholder {
+.search-bar input[type="search"]::placeholder {
     color: black;
 }
 
-#restaurant-location input[type="search"]:focus {
+.search-bar input[type="search"]:focus {
     outline: none;
 }
 

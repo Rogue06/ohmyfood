@@ -27,19 +27,19 @@ html {
   justify-content: center;
 }
 
-#restaurant-location input[type=search] {
+.search-bar input[type=search] {
   border: none;
 }
 
-#restaurant-location input[type=search]::-moz-placeholder {
+.search-bar input[type=search]::-moz-placeholder {
   color: black;
 }
 
-#restaurant-location input[type=search]::placeholder {
+.search-bar input[type=search]::placeholder {
   color: black;
 }
 
-#restaurant-location input[type=search]:focus {
+.search-bar input[type=search]:focus {
   outline: none;
 }
 
