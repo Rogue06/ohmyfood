@@ -1,3 +1,48 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  margin-bottom: 20px;
+}
+
+.location__container {
+  padding: 20px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+#restaurant-location input[type=search] {
+  border: none;
+}
+
+#restaurant-location input[type=search]::-moz-placeholder {
+  color: black;
+}
+
+#restaurant-location input[type=search]::placeholder {
+  color: black;
+}
+
+#restaurant-location input[type=search]:focus {
+  outline: none;
+}
+
 .restaurant__container img {
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
