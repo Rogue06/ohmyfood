@@ -16,15 +16,37 @@ html {
   display: flex;
   justify-content: center;
   height: 44px;
-  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.logo img {
+  padding-bottom: 10px;
 }
 
 .location__container {
-  padding: 20px;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.268);
+  position: relative;
+  z-index: 1;
+}
+
+#restaurant-location {
+  background-color: #EAEAEA;
+  width: 122px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-location-dot {
+  margin-right: 15px;
 }
 
 .search-bar input[type=search] {
@@ -41,6 +63,51 @@ html {
 
 .search-bar input[type=search]:focus {
   outline: none;
+}
+
+.section__book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  background-color: #F6F6F6;
+}
+.section__book .book__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+.section__book .book__container .book__title h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+.section__book .book__container .book__text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+.section__book .book__container .book__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #FF79DA 10%, #9356DC 90%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.section__book .book__container .book__button .button__text {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 5px;
 }
 
 .restaurant__container img {
