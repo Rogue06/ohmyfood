@@ -298,8 +298,6 @@ a {
         gap: 7px;
         color: white;
 
-
-
         .fa-utensils,
         .fa-handshake-angle {
             width: 11.92px;
@@ -307,5 +305,9 @@ a {
             margin-right: 10px;
         }
 
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 }
