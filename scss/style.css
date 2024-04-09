@@ -16,6 +16,10 @@ h2 {
   font-size: 24px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -167,6 +171,37 @@ h2 {
   color: #7E7E7E;
 }
 
-.restaurant__container img {
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 20px;
+}
+.restaurants__title {
+  margin: 30px 0;
+}
+.restaurants .container {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .container .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurants .container .card {
+  height: 251px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.restaurants .container .card img {
+  border-radius: 20px 20px 0 0;
   width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer__container {
+  background-color: #353535;
 }/*# sourceMappingURL=style.css.map */
