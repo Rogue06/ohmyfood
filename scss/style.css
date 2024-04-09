@@ -198,6 +198,7 @@ a {
   border-radius: 20px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  position: relative;
 }
 .restaurants .container .card img {
   border-radius: 20px 20px 0 0;
@@ -214,16 +215,18 @@ a {
   color: #008766;
   font-size: 14px;
   padding: 6px 10px;
-  transform: translateX(-10%) translateY(20%);
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: -165px;
-  left: 280px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 .restaurants .container .card .card__label--3,
 .restaurants .container .card .card__label--4 {
   visibility: hidden;
+}
+.restaurants .container .card .card__content {
+  flex-grow: 1;
 }
 .restaurants .container .card .card__content .card__txt {
   padding: 0 0 10px 10px;
