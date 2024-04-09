@@ -226,16 +226,20 @@ a {
   visibility: hidden;
 }
 .restaurants .container .card .card__content {
-  flex-grow: 1;
+  display: flexbox;
 }
 .restaurants .container .card .card__content .card__txt {
   padding: 0 0 10px 10px;
   color: black;
+  position: relative;
+}
+.restaurants .container .card .card__content .card__txt h3 {
+  margin: 10px 0 5px 0;
 }
 .restaurants .container .card .card__content .card__icon .fa-heart {
-  position: relative;
-  top: -45px;
-  left: 330px;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
   font-size: 1.4em;
   color: black;
 }

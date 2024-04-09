@@ -298,23 +298,27 @@ a {
             }
 
             .card__content {
-                flex-grow: 1;
+                display: flexbox;
+
 
 
                 .card__txt {
                     padding: 0 0 10px 10px;
                     color: black;
+                    position: relative;
 
-
+                    h3 {
+                        margin: 10px 0 5px 0;
+                    }
                 }
 
                 .card__icon {
                     //
 
                     .fa-heart {
-                        position: relative;
-                        top: -45px;
-                        left: 330px;
+                        position: absolute;
+                        bottom: 30px;
+                        right: 20px;
                         font-size: 1.4em;
                         color: black;
 
@@ -323,6 +327,7 @@ a {
                 }
 
             }
+
         }
     }
 }
