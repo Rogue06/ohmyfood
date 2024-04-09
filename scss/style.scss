@@ -3,6 +3,8 @@
 $primary-purple: #9356DC;
 $secondary-pink: #FF79DA;
 $tertiary-green: #99E2D0;
+$font-color--label: #008766;
+
 $background-location: #EAEAEA;
 $section-background: #F6F6F6;
 $icon-color :#7E7E7E;
@@ -234,7 +236,7 @@ a {
 }
 
 
-
+// restaurants section //////////////////////////////:
 
 .restaurants {
     background-color: $section-background;
@@ -244,12 +246,14 @@ a {
 
 
     &__title {
-        margin: 30px 0;
+        margin: 30px 0 20px 0;
     }
 
     .container {
         display: flex;
         flex-direction: column;
+
+
 
         .cards {
             display: flex;
@@ -272,11 +276,61 @@ a {
 
             }
 
+            .card__label--1,
+            .card__label--2,
+            .card__label--3,
+            .card__label--4 {
+                background-color: $tertiary-green;
+                color: $font-color--label;
+                font-size: 14px;
+                padding: 6px 10px;
+                transform: translateX(-10%) translateY(20%);
+                border-radius: 3px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                position: relative;
+                top: -165px;
+                left: 280px;
 
+
+
+            }
+
+            .card__label--3,
+            .card__label--4 {
+                visibility: hidden;
+            }
+
+            .card__content {
+
+
+
+                .card__txt {
+                    padding: 0 0 10px 10px;
+                    color: black;
+
+
+
+                }
+
+                .card__icon {
+
+
+                    .fa-heart {
+                        position: relative;
+                        top: -45px;
+                        left: 330px;
+                        color: black;
+
+
+                    }
+                }
+
+            }
         }
     }
 }
 
+// Footer ///////////////////////////////
 
 .footer__container {
     background-color: $footer-color;
@@ -311,3 +365,5 @@ a {
         }
     }
 }
+
+// pour mettre ... si texte trop gros text-overflow: ellipsis;

@@ -181,7 +181,7 @@ a {
   padding-bottom: 80px;
 }
 .restaurants__title {
-  margin: 30px 0;
+  margin: 30px 0 20px 0;
 }
 .restaurants .container {
   display: flex;
@@ -205,6 +205,35 @@ a {
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.restaurants .container .card .card__label--1,
+.restaurants .container .card .card__label--2,
+.restaurants .container .card .card__label--3,
+.restaurants .container .card .card__label--4 {
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  padding: 6px 10px;
+  transform: translateX(-10%) translateY(20%);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -165px;
+  left: 280px;
+}
+.restaurants .container .card .card__label--3,
+.restaurants .container .card .card__label--4 {
+  visibility: hidden;
+}
+.restaurants .container .card .card__content .card__txt {
+  padding: 0 0 10px 10px;
+  color: black;
+}
+.restaurants .container .card .card__content .card__icon .fa-heart {
+  position: relative;
+  top: -45px;
+  left: 330px;
+  color: black;
 }
 
 .footer__container {
