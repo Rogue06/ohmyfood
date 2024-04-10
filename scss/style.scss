@@ -59,13 +59,14 @@ a {
 
 .main__container {
     padding-top: 10px;
+
 }
 
 .logo {
     display: flex;
     justify-content: center;
     height: 44px;
-    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.15);
+    box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
 }
