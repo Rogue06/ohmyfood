@@ -314,4 +314,7 @@ a {
 .palette_du_gout__main .restaurants__title {
   display: flex;
   justify-content: space-around;
+}
+.palette_du_gout__main .restaurants__title .fa-heart {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

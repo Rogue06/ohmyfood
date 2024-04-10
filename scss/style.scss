@@ -438,6 +438,10 @@ a {
     .restaurants__title {
         display: flex;
         justify-content: space-around;
+
+        .fa-heart {
+            color: black;
+        }
     }
 }
 
