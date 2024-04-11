@@ -120,7 +120,7 @@ a {
 }
 .section__book .book__container .book__button:hover {
   background: linear-gradient(180deg, #ff93e1 10%, #a16be0 90%);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 .section__book .book__container .book__button .button__text {
   font-weight: 400;
@@ -317,4 +317,53 @@ a {
 }
 .palette_du_gout__main .restaurants__title .fa-heart {
   color: black;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.palette_du_gout__section {
+  padding: 0 30px 0 30px;
+}
+.palette_du_gout__section .menu__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  /*
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  width: 40px;
+  height: 3px;
+  background: #008766;*/
+}
+.palette_du_gout__section .menu__title {
+  margin: 20px 0 20px 0;
+}
+.palette_du_gout__section .cards__entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.palette_du_gout__section .cards__entrees .card-1,
+.palette_du_gout__section .cards__entrees .card-2,
+.palette_du_gout__section .cards__entrees .card-3 {
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px;
+}
+.palette_du_gout__section .cards__entrees .text-content__menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.palette_du_gout__section .cards__entrees .text-content__menu .bloc-text__menu {
+  display: flex;
+  flex-direction: column;
+}
+.palette_du_gout__section .cards__entrees .text-content__menu .card__title {
+  font-weight: 500;
+}
+
+/*.footer__container {
+    position: relative;
+    bottom: -1061px;
+}*//*# sourceMappingURL=style.css.map */

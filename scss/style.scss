@@ -22,7 +22,7 @@ $footer-color: #353535;
 // effet survol, éclaircit les couleurs de 10% et aug l'ombre.
 @mixin purple-button--hover {
     background: linear-gradient(180deg, lighten($secondary-pink, 5%) 10%, lighten($primary-purple, 5%) 90%);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 // lighten($secondary-pink, 10%) éclaircit la couleur $secondary-pink de 10%.
@@ -445,6 +445,72 @@ a {
     }
 }
 
+// Menus ////////////////////////////////
+.palette_du_gout__section {
+    padding: 0 30px 0 30px;
+
+    .menu__title {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        /*
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        width: 40px;
+        height: 3px;
+        background: #008766;*/
+
+    }
+
+    .menu__title {
+        margin: 20px 0 20px 0;
+    }
+
+    .cards__entrees {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        .card-1,
+        .card-2,
+        .card-3 {
+            @include cards-effects;
+            background-color: white;
+            padding: 10px;
+
+
+
+        }
+
+        .text-content__menu {
+            display: flex;
+            flex-wrap: wrap;
+
+            .bloc-text__menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card__title {
+                font-weight: 500;
+            }
+        }
+
+
+
+    }
+
+}
+
+// Footer ///////////////////////////////
+/*.footer__container {
+    position: relative;
+    bottom: -1061px;
+}*/
 
 
 // pour mettre ... si texte trop gros text-overflow: ellipsis;
