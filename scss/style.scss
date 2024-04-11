@@ -420,12 +420,12 @@ a {
 
     .palette_du_gout__section {
         background-color: $section-background;
-        height: 1275px;
+
         width: 100%;
         padding-top: 20px;
         border-radius: 30px;
-        position: absolute;
-        top: 320px;
+        position: relative;
+        top: -30px;
     }
 
     .banner__restaurant img {
@@ -507,10 +507,6 @@ a {
 }
 
 // Footer ///////////////////////////////
-/*.footer__container {
-    position: relative;
-    bottom: -1061px;
-}*/
 
 
 // pour mettre ... si texte trop gros text-overflow: ellipsis;

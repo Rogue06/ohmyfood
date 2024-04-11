@@ -298,12 +298,11 @@ a {
 }
 .palette_du_gout__main .palette_du_gout__section {
   background-color: #F6F6F6;
-  height: 1275px;
   width: 100%;
   padding-top: 20px;
   border-radius: 30px;
-  position: absolute;
-  top: 320px;
+  position: relative;
+  top: -30px;
 }
 .palette_du_gout__main .banner__restaurant img {
   width: 100%;
@@ -361,9 +360,4 @@ a {
 }
 .palette_du_gout__section .cards__entrees .text-content__menu .card__title {
   font-weight: 500;
-}
-
-/*.footer__container {
-    position: relative;
-    bottom: -1061px;
-}*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
