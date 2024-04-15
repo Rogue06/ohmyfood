@@ -360,4 +360,43 @@ a {
 }
 .palette_du_gout__section .cards__entrees .text-content__menu .card__title {
   font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    max-width: 100%;
+  }
+  .section__book {
+    min-height: 150px;
+  }
+  .section__book .book__container {
+    justify-content: flex-start;
+    margin: 30px;
+  }
+  .section__book .book__container .book__title {
+    margin-bottom: 20px;
+  }
+  .section__book .book__container .book__title h2 {
+    font-size: 40px;
+  }
+  .section__book .book__container .book__button {
+    min-width: auto;
+  }
+  .instructions,
+  .container {
+    padding: 0 130px;
+  }
+  .steps__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .steps__container .step__one,
+  .steps__container .step__two,
+  .steps__container .step__three {
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

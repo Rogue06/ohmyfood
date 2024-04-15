@@ -507,7 +507,72 @@ a {
 
 }
 
-// Footer ///////////////////////////////
+// Version desktop ///////////////////////////////
+
+@media screen and (min-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        max-width: 100%;
+    }
+
+
+    .section__book {
+        min-height: 150px;
+
+        .book__container {
+            justify-content: flex-start;
+            margin: 30px;
+
+            .book__title {
+                margin-bottom: 20px;
+
+                h2 {
+                    font-size: 40px;
+                }
+
+            }
+
+            .book__button {
+                min-width: auto;
+            }
+        }
+
+    }
+
+    .instructions,
+    .container {
+        padding: 0 130px;
+    }
+
+
+
+    .steps__container {
+        flex-direction: row;
+        justify-content: space-around;
+
+
+        .step__one,
+        .step__two,
+        .step__three {
+            margin: 0;
+
+
+        }
+
+    }
+
+
+
+
+
+
+}
+
 
 
 // pour mettre ... si texte trop gros text-overflow: ellipsis;
