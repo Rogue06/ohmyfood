@@ -74,11 +74,12 @@ a {
 .logo {
     display: flex;
     justify-content: center;
-    height: 44px;
+    height: 40px;
     box-shadow: 0 4px 5px rgb(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
 }
+
 
 .logo img {
     padding-bottom: 10px;
@@ -374,8 +375,8 @@ a {
 
         .fa-utensils,
         .fa-handshake-angle {
-            margin-right: 10px;
-            font-size: 1em;
+            margin-right: 5px;
+            font-size: 0.8em;
 
         }
 

@@ -57,12 +57,13 @@ body .palette_du_gout__section {
   width: 100%;
   border-radius: 30px 30px 0 0;
   position: relative;
-  top: -30px;
+  margin-top: -30px;
 }
 body .restaurants__title {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 10px;
 }
 body .restaurants__title .fa-heart {
   color: black;
@@ -97,9 +98,6 @@ body .restaurants__title .fa-heart {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /*.text-content__menu {
-      display: flex;
-      flex-direction: column;*/
 }
 .cards__entrees .card-1,
 .cards__entrees .card-2,
@@ -113,7 +111,7 @@ body .restaurants__title .fa-heart {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   background-color: white;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
 }
 .cards__entrees .text-content__menu,
 .cards__plats .text-content__menu,
@@ -122,7 +120,7 @@ body .restaurants__title .fa-heart {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: calc(100% - 30px);
+  max-width: calc(100% - 15px);
 }
 .cards__entrees .text-content__menu .bloc-text__menu,
 .cards__plats .text-content__menu .bloc-text__menu,
@@ -145,6 +143,7 @@ body .restaurants__title .fa-heart {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }
 .cards__entrees .text-content__menu .text-price__menu .card__description,
 .cards__plats .text-content__menu .text-price__menu .card__description,
@@ -201,8 +200,8 @@ body .restaurants__title .fa-heart {
 }
 .footer__container .footer__logo-text .fa-utensils,
 .footer__container .footer__logo-text .fa-handshake-angle {
-  margin-right: 10px;
-  font-size: 1em;
+  margin-right: 5px;
+  font-size: 0.8em;
 }
 .footer__container .footer__logo-text a {
   text-decoration: none;

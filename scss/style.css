@@ -27,7 +27,7 @@ a {
 .logo {
   display: flex;
   justify-content: center;
-  height: 44px;
+  height: 40px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
@@ -267,8 +267,8 @@ a {
 }
 .footer__container .footer__logo-text .fa-utensils,
 .footer__container .footer__logo-text .fa-handshake-angle {
-  margin-right: 10px;
-  font-size: 1em;
+  margin-right: 5px;
+  font-size: 0.8em;
 }
 .footer__container .footer__logo-text a {
   text-decoration: none;
