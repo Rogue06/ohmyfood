@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -170,6 +171,68 @@ body .restaurants__title .fa-heart {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
+.card-1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card-1 .menu__checker {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  /* Aligner en haut */
+  height: 100%;
+  /* Prendre toute la hauteur de la carte */
+  width: 10%;
+  /* Largeur de la div menu__checker */
+  transform: translateY(0);
+  /* Réinitialiser la transformation */
+  color: #99E2D0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-1 .menu__checker .fa-circle-check {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.card-1 .menu__checker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Prendre toute la hauteur de la carte */
+  background-color: #99E2D0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-1 .card__price {
+  transition: transform 0.3s ease;
+}
+.card-1:active {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+.card-1:active .menu__checker {
+  opacity: 1;
+  right: 0;
+}
+.card-1:active .menu__checker::after {
+  opacity: 0.5;
+}
+.card-1:active .card__price {
+  transform: translateX(-10%);
+  transition: transform 0.3s ease;
+}
+
 .footer__container {
   background-color: #353535;
   padding: 20px;
@@ -213,6 +276,7 @@ body .restaurants__title .fa-heart {
   }
   body .palette_du_gout__section {
     width: 70%;
+    padding-bottom: 5px;
     position: relative;
     left: 15%;
   }

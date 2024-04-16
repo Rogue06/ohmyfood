@@ -209,4 +209,61 @@ body .restaurants__title .fa-heart {
 .footer__container .footer__logo-text a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    max-width: 100%;
+  }
+  body {
+    background-color: white;
+  }
+  body .delice-des-sens__section {
+    width: 70%;
+    padding-bottom: 5px;
+    position: relative;
+    left: 15%;
+  }
+  body .restaurants__title {
+    justify-content: center;
+    gap: 20px;
+  }
+  .entrees,
+  .plats,
+  .desserts {
+    width: 60%;
+    position: relative;
+    left: 20%;
+  }
+  .button__container {
+    width: 40%;
+    position: relative;
+    left: 30%;
+  }
+  .footer__container {
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 110px;
+    padding-top: 60px;
+  }
+  .footer__container .footer__logo-text {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer__container .footer__logo-text .mentions {
+    margin-left: 40px;
+  }
+  .footer__container .footer__logo {
+    margin-top: 5px;
+  }
+  .footer__container .footer__logo img {
+    margin: 0;
+    margin-left: 60px;
+    width: 80px;
+    height: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
