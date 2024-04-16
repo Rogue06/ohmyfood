@@ -232,6 +232,9 @@ a {
         .step__text {
             margin-left: 20px;
             font-weight: 500;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
     }
@@ -455,14 +458,7 @@ a {
         text-transform: uppercase;
         font-weight: 300;
 
-        /*
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -7px;
-        width: 40px;
-        height: 3px;
-        background: #008766;*/
+
 
     }
 
@@ -509,7 +505,7 @@ a {
 
 // Version desktop ///////////////////////////////
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
     * {
         margin: 0;
@@ -544,35 +540,91 @@ a {
 
     }
 
+
+
     .instructions,
     .container {
-        padding: 0 130px;
+        padding: 0 20px;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
 
     .steps__container {
         flex-direction: row;
-        justify-content: space-around;
+
+        gap: 50px;
 
 
         .step__one,
         .step__two,
         .step__three {
             margin: 0;
+            padding: 10px;
+            width: calc(30.3% - 20px);
+            max-width: none;
 
 
         }
+
 
     }
 
 
 
 
+    .restaurants {
+        padding: 0;
+        padding-bottom: 30px;
+
+        .container {
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+
+                .card {
+                    max-width: calc(100% - 30px);
+                }
+            }
+        }
+    }
 
 
 }
 
+// Footer /////////////////////////////
 
 
-// pour mettre ... si texte trop gros text-overflow: ellipsis;
+.footer__container {
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 110px;
+    padding-top: 60px;
+
+    .footer__logo-text {
+        flex-direction: row;
+        gap: 10px;
+
+        .mentions {
+            margin-left: 40px;
+        }
+
+
+    }
+
+    .footer__logo {
+        margin-top: 5px;
+
+        img {
+            margin: 0;
+            margin-left: 60px;
+            width: 80px;
+            height: 15px;
+        }
+    }
+
+
+}

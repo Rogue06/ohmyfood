@@ -167,6 +167,9 @@ a {
 .steps__container .step__iconandtxt .step__text {
   margin-left: 20px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .steps__container .fa-store {
   color: #9356DC;
@@ -325,14 +328,6 @@ a {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300;
-  /*
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -7px;
-  width: 40px;
-  height: 3px;
-  background: #008766;*/
 }
 .palette_du_gout__section .menu__title {
   margin: 20px 0 20px 0;
@@ -362,7 +357,7 @@ a {
   font-weight: 500;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   * {
     margin: 0;
     padding: 0;
@@ -388,15 +383,55 @@ a {
   }
   .instructions,
   .container {
-    padding: 0 130px;
+    padding: 0 20px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .steps__container {
     flex-direction: row;
-    justify-content: space-around;
+    gap: 50px;
   }
   .steps__container .step__one,
   .steps__container .step__two,
   .steps__container .step__three {
     margin: 0;
+    padding: 10px;
+    width: calc(30.3% - 20px);
+    max-width: none;
   }
+  .restaurants {
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .restaurants .container .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .restaurants .container .cards .card {
+    max-width: calc(100% - 30px);
+  }
+}
+.footer__container {
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 110px;
+  padding-top: 60px;
+}
+.footer__container .footer__logo-text {
+  flex-direction: row;
+  gap: 10px;
+}
+.footer__container .footer__logo-text .mentions {
+  margin-left: 40px;
+}
+.footer__container .footer__logo {
+  margin-top: 5px;
+}
+.footer__container .footer__logo img {
+  margin: 0;
+  margin-left: 60px;
+  width: 80px;
+  height: 15px;
 }/*# sourceMappingURL=style.css.map */
