@@ -258,81 +258,102 @@ body {
 
 
 
+.card-1 {
+    position: relative;
+    overflow: hidden;
+
+    // Votre code existant pour .card-1
+
+    &:hover .menu__checker {
+        opacity: 1;
+        right: 0;
+
+        // Afficher le fond vert
+        &::after {
+            background-color: rgba($tertiary-green, 1); // Fond vert opaque
+        }
+    }
+
+    &:hover .text-content__menu {
+        width: calc(100% - 10%);
+        transition: width 0.8s ease; // Ajout de la transition pour réduire la largeur
+    }
+}
+
+.menu__checker {
+    position: absolute;
+    right: -10%; // Cachée par défaut
+    top: 0;
+    height: 100%;
+    width: 18%;
+    transform: translateY(0);
+    color: $tertiary-green;
+    opacity: 0;
+    transition: all 0.8s ease; // Transition pour l'opacité et la position
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Ajout du fond vert
+    &::after {
+        content: '\f058'; // Code de l'icône check
+        font-family: "Font Awesome 5 Free"; // Font Awesome
+        font-weight: 900;
+        font-size: 24px;
+        color: white; // Couleur de l'icône check
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($tertiary-green, 0); // Fond vert transparent
+        transition: background-color 0.3s ease; // Transition de la couleur du fond
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 .card-1 {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
 
-    // Votre code existant pour .card-1
+    &:hover .menu__checker {
+        opacity: 1;
+        right: 0;
 
-    .menu__checker {
-        position: absolute;
-        right: -100%; // Cachée par défaut
-        top: 0;
-        /* Aligner en haut */
-        height: 100%;
-        /* Prendre toute la hauteur de la carte */
-        width: 10%;
-        /* Largeur de la div menu__checker */
-        transform: translateY(0);
-        /* Réinitialiser la transformation */
-        color: $tertiary-green;
-        opacity: 0;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center; // Centre l'icône verticalement
-        justify-content: center; // Centre l'icône horizontalement
-
-        // Pour l'icône "check"
-        .fa-circle-check {
-            font-size: 24px; // Taille de l'icône
-            margin-right: 5px; // Espacement entre l'icône et le texte
-        }
-
-        // Ajout du fond vert
+        // Afficher le fond vert
         &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Prendre toute la hauteur de la carte */
-            background-color: $tertiary-green;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-            display: flex;
-            align-items: center; // Centre l'icône verticalement
-            justify-content: center; // Centre l'icône horizontalement
+            background-color: rgba($tertiary-green, 1); // Fond vert opaque   
+        }
+
+        i.fa-circle-check {
+            transform: rotate(360deg); // Rotation de l'icone check
         }
     }
 
-    .card__price {
-        transition: transform 0.3s ease; // Transition pour le déplacement du prix
-    }
-
-    &:active {
-        .menu__checker {
-            opacity: 1;
-            right: 0;
-
-            // Afficher le fond vert
-            &::after {
-                opacity: 0.5; // Opacité du fond vert
-            }
-        }
-
-        .card__price {
-            transform: translateX(-10%); // Déplacer le prix vers la gauche
-            transition: transform 0.3s ease; // Ajout de la transition
-        }
-
-        transform: translateX(10px);
-        transition: transform 0.3s ease;
+    &:hover .text-content__menu {
+        width: calc(100% - 20%);
+        transition: width 0.3s ease; // Transition pour réduire la largeur
     }
 }
+
+.card__price {
+    transition: transform 0.8s ease; // Transition pour le déplacement du prix
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

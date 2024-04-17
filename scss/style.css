@@ -230,7 +230,7 @@ a {
   visibility: hidden;
 }
 .restaurants .container .card .card__content {
-  display: flexbox;
+  display: flex;
 }
 .restaurants .container .card .card__content .card__txt {
   padding: 0 0 10px 10px;
@@ -249,10 +249,11 @@ a {
 }
 
 .footer__container {
+  display: flex;
+  flex-direction: column;
   background-color: #353535;
   padding: 20px;
   display: flex;
-  flex-direction: column;
 }
 .footer__container .footer__logo img {
   width: 120px;
@@ -276,85 +277,6 @@ a {
 .footer__container .footer__logo-text a {
   text-decoration: none;
   color: white;
-}
-
-.nav__container {
-  display: flex;
-  justify-content: center;
-}
-.nav__container .logo__pages {
-  height: 44px;
-  margin: 20px 0 20px 0;
-}
-.nav__container .fa-arrow-left {
-  position: absolute;
-  top: 7px;
-  left: 30px;
-  margin-top: 20px;
-}
-
-.palette_du_gout__main h2 {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 28px;
-}
-.palette_du_gout__main .palette_du_gout__section {
-  background-color: #F6F6F6;
-  width: 100%;
-  padding-top: 20px;
-  border-radius: 30px;
-  position: relative;
-  top: -30px;
-}
-.palette_du_gout__main .banner__restaurant img {
-  width: 100%;
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.palette_du_gout__main .restaurants__title {
-  display: flex;
-  justify-content: space-around;
-}
-.palette_du_gout__main .restaurants__title .fa-heart {
-  color: black;
-}
-
-.palette_du_gout__section {
-  padding: 0 30px 0 30px;
-}
-.palette_du_gout__section .menu__title {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-.palette_du_gout__section .menu__title {
-  margin: 20px 0 20px 0;
-}
-.palette_du_gout__section .cards__entrees {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.palette_du_gout__section .cards__entrees .card-1,
-.palette_du_gout__section .cards__entrees .card-2,
-.palette_du_gout__section .cards__entrees .card-3 {
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  background-color: white;
-  padding: 10px;
-}
-.palette_du_gout__section .cards__entrees .text-content__menu {
-  display: flex;
-  flex-wrap: wrap;
-}
-.palette_du_gout__section .cards__entrees .text-content__menu .bloc-text__menu {
-  display: flex;
-  flex-direction: column;
-}
-.palette_du_gout__section .cards__entrees .text-content__menu .card__title {
-  font-weight: 500;
 }
 
 @media screen and (min-width: 1024px) {
@@ -412,26 +334,26 @@ a {
   .restaurants .container .cards .card {
     max-width: calc(100% - 30px);
   }
-}
-.footer__container {
-  flex-direction: row-reverse;
-  align-items: center;
-  height: 110px;
-  padding-top: 60px;
-}
-.footer__container .footer__logo-text {
-  flex-direction: row;
-  gap: 10px;
-}
-.footer__container .footer__logo-text .mentions {
-  margin-left: 40px;
-}
-.footer__container .footer__logo {
-  margin-top: 5px;
-}
-.footer__container .footer__logo img {
-  margin: 0;
-  margin-left: 60px;
-  width: 80px;
-  height: 15px;
+  .footer__container {
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 110px;
+    padding-top: 60px;
+  }
+  .footer__container .footer__logo-text {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer__container .footer__logo-text .mentions {
+    margin-left: 40px;
+  }
+  .footer__container .footer__logo {
+    margin-top: 5px;
+  }
+  .footer__container .footer__logo img {
+    margin: 0;
+    margin-left: 60px;
+    width: 80px;
+    height: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

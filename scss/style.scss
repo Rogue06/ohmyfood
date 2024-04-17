@@ -11,7 +11,6 @@ $icon-color :#7E7E7E;
 $footer-color: #353535;
 
 
-
 // Mixins ////////////////////
 
 // Button
@@ -80,11 +79,9 @@ a {
     z-index: 2;
 }
 
-
 .logo img {
     padding-bottom: 10px;
 }
-
 
 .location__container {
     padding: 15px 0;
@@ -151,8 +148,6 @@ a {
             font-size: 18px;
             font-weight: 300;
             margin: 0 0 20px 0;
-
-
         }
 
         .book__button {
@@ -181,15 +176,12 @@ a {
             }
         }
     }
-
-
 }
 
 // Section Fonctionnement 
 
 .instructions {
     margin: 40px 20px;
-
 
     &__title {
         margin: 20px 0;
@@ -200,8 +192,6 @@ a {
     display: flex;
     flex-direction: column;
 
-
-
     .step__one,
     .step__two,
     .step__three {
@@ -209,7 +199,6 @@ a {
         background-color: $section-background;
         padding: 15px;
         margin: 10px;
-
 
         .step__numbers {
 
@@ -220,7 +209,6 @@ a {
             padding: 4px 8px;
             border-radius: 20px;
             transform: translateX(-115%) translateY(50%);
-
         }
     }
 
@@ -236,7 +224,6 @@ a {
             overflow: hidden;
             white-space: nowrap;
         }
-
     }
 
     .fa-store {
@@ -249,15 +236,12 @@ a {
     }
 }
 
-
 // restaurants section //////////////////////////////:
 
 .restaurants {
     background-color: $section-background;
     padding: 20px;
     padding-bottom: 80px;
-
-
 
     &__title {
         margin: 30px 0 20px 0;
@@ -266,8 +250,6 @@ a {
     .container {
         display: flex;
         flex-direction: column;
-
-
 
         .cards {
             display: flex;
@@ -281,8 +263,6 @@ a {
             border-radius: 20px;
             @include cards-effects;
             position: relative;
-
-
 
             img {
                 border-radius: 20px 20px 0 0;
@@ -312,9 +292,7 @@ a {
             }
 
             .card__content {
-                display: flexbox;
-
-
+                display: flex;
 
                 .card__txt {
                     padding: 0 0 10px 10px;
@@ -327,8 +305,8 @@ a {
                 }
 
                 .card__icon {
-                    //
 
+                    //
                     .fa-heart {
                         position: absolute;
                         bottom: 30px;
@@ -339,28 +317,25 @@ a {
 
                     }
                 }
-
             }
-
         }
     }
 }
 
 
-
 // Footer ///////////////////////////////
 
 .footer__container {
+    display: flex;
+    flex-direction: column;
     background-color: $footer-color;
     padding: 20px;
     display: flex;
-    flex-direction: column;
 
     .footer__logo img {
         width: 120px;
         height: 20px;
         margin-bottom: 15px;
-
     }
 
     .footer__logo-text {
@@ -374,13 +349,10 @@ a {
             margin-left: 5px;
         }
 
-
-
         .fa-utensils,
         .fa-handshake-angle {
             margin-right: 5px;
             font-size: 0.8em;
-
         }
 
         a {
@@ -390,118 +362,6 @@ a {
     }
 }
 
-
-// Pages annexes restaurants //////////////////////////////////
-
-
-.nav__container {
-    display: flex;
-    justify-content: center;
-
-
-    .logo__pages {
-        height: 44px;
-        margin: 20px 0 20px 0;
-
-
-    }
-
-    .fa-arrow-left {
-        position: absolute;
-        top: 7px;
-        left: 30px;
-        margin-top: 20px;
-
-    }
-}
-
-.palette_du_gout__main {
-
-
-    h2 {
-        @include shrinkland;
-    }
-
-    .palette_du_gout__section {
-        background-color: $section-background;
-
-        width: 100%;
-        padding-top: 20px;
-        border-radius: 30px;
-        position: relative;
-        top: -30px;
-    }
-
-    .banner__restaurant img {
-        width: 100%;
-        height: 275px;
-        object-fit: cover;
-
-    }
-
-    .restaurants__title {
-        display: flex;
-        justify-content: space-around;
-
-        .fa-heart {
-            color: black;
-        }
-    }
-}
-
-// Menus ////////////////////////////////
-.palette_du_gout__section {
-    padding: 0 30px 0 30px;
-
-    .menu__title {
-        font-size: 16px;
-        text-transform: uppercase;
-        font-weight: 300;
-
-
-
-    }
-
-    .menu__title {
-        margin: 20px 0 20px 0;
-    }
-
-    .cards__entrees {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-
-        .card-1,
-        .card-2,
-        .card-3 {
-            @include cards-effects;
-            background-color: white;
-            padding: 10px;
-
-
-
-        }
-
-        .text-content__menu {
-            display: flex;
-            flex-wrap: wrap;
-
-            .bloc-text__menu {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .card__title {
-                font-weight: 500;
-            }
-        }
-
-
-
-    }
-
-}
 
 // Version desktop ///////////////////////////////
 
@@ -516,7 +376,6 @@ a {
         max-width: 100%;
     }
 
-
     .section__book {
         min-height: 150px;
 
@@ -530,7 +389,6 @@ a {
                 h2 {
                     font-size: 40px;
                 }
-
             }
 
             .book__button {
@@ -540,8 +398,6 @@ a {
 
     }
 
-
-
     .instructions,
     .container {
         padding: 0 20px;
@@ -550,13 +406,9 @@ a {
         margin-right: auto;
     }
 
-
-
     .steps__container {
         flex-direction: row;
-
         gap: 50px;
-
 
         .step__one,
         .step__two,
@@ -565,15 +417,8 @@ a {
             padding: 10px;
             width: calc(30.3% - 20px);
             max-width: none;
-
-
         }
-
-
     }
-
-
-
 
     .restaurants {
         padding: 0;
@@ -593,38 +438,39 @@ a {
     }
 
 
-}
-
-// Footer /////////////////////////////
 
 
-.footer__container {
-    flex-direction: row-reverse;
-    align-items: center;
-    height: 110px;
-    padding-top: 60px;
+    // Footer /////////////////////////////
 
-    .footer__logo-text {
-        flex-direction: row;
-        gap: 10px;
 
-        .mentions {
-            margin-left: 40px;
+    .footer__container {
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 110px;
+        padding-top: 60px;
+
+        .footer__logo-text {
+            flex-direction: row;
+            gap: 10px;
+
+            .mentions {
+                margin-left: 40px;
+            }
+
+
+        }
+
+        .footer__logo {
+            margin-top: 5px;
+
+            img {
+                margin: 0;
+                margin-left: 60px;
+                width: 80px;
+                height: 15px;
+            }
         }
 
 
     }
-
-    .footer__logo {
-        margin-top: 5px;
-
-        img {
-            margin: 0;
-            margin-left: 60px;
-            width: 80px;
-            height: 15px;
-        }
-    }
-
-
 }
