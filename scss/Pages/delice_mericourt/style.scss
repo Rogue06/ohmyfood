@@ -12,7 +12,6 @@ $icon-color :#7E7E7E;
 $footer-color: #353535;
 
 
-
 // Mixins ////////////////////
 
 // Button
@@ -47,7 +46,6 @@ $footer-color: #353535;
 }
 
 // fonts
-
 @mixin shrinkland {
     font-family: "Shrikhand", serif;
     font-weight: 400;
@@ -78,20 +76,15 @@ a {
 }
 
 
-
-
 /////////////////////////////////////////////////////////////////////////////
-
 
 .nav__container {
     display: flex;
     justify-content: center;
 
-
     .logo {
         height: 30px;
         margin: 20px 0 20px 0;
-
     }
 
     .fa-arrow-left {
@@ -100,13 +93,11 @@ a {
         left: 30px;
         margin-top: 20px;
         color: black;
-
     }
 }
 
 body {
     background-color: $section-background;
-
 
     h2 {
         @include shrinkland;
@@ -127,29 +118,21 @@ body {
         margin-top: -30px;
     }
 
-
-
     .restaurants__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: 10px;
 
-
         .fa-heart {
-
             color: black;
             font-size: 24px;
-
         }
     }
-
 }
 
 
-
 // Menus ////////////////////////////////
-
 
 .border__title {
     height: 3px;
@@ -158,26 +141,12 @@ body {
     margin-bottom: 10px;
 }
 
-
 .menu__title {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 300;
     margin: 40px 0 5px 0;
-
-
-    /*
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -7px;
-        width: 40px;
-        height: 3px;
-        background: #008766;*/
-
 }
-
-
 
 .cards__entrees,
 .cards__plats,
@@ -186,7 +155,6 @@ body {
     flex-direction: column;
     gap: 20px;
 
-
     .card-1,
     .card-2,
     .card-3,
@@ -194,10 +162,7 @@ body {
         @include cards-effects;
         background-color: white;
         padding: 15px 0 15px 15px;
-
-
     }
-
 
     .text-content__menu {
         /* gestion hide ...*/
@@ -205,10 +170,6 @@ body {
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: calc(100% - 15px); // Réduire la largeur pour permettre les points de suspension
-
-
-
-
 
         .bloc-text__menu {
             display: flex;
@@ -230,24 +191,16 @@ body {
             align-items: center;
             margin-top: 5px;
 
-
-
-
             .card__description {
                 font-weight: 300;
                 /* gestion hide ...*/
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-
-
             }
         }
     }
-
 }
-
-
 
 .button__container {
     display: flex;
@@ -265,9 +218,6 @@ body {
 }
 
 
-
-
-
 // Footer ///////////////////////////////
 
 .footer__container {
@@ -280,11 +230,9 @@ body {
         width: 120px;
         height: 20px;
         margin-bottom: 15px;
-
     }
 
     .footer__logo-text {
-
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -293,8 +241,6 @@ body {
         .prop-restaurant {
             margin-left: 5px;
         }
-
-
 
         .fa-utensils,
         .fa-handshake-angle {
@@ -311,7 +257,6 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-
     * {
         margin: 0;
         padding: 0;
@@ -320,7 +265,6 @@ body {
     html {
         max-width: 100%;
     }
-
 
     body {
         background-color: white;
@@ -352,9 +296,7 @@ body {
         left: 30%;
     }
 
-
     // Footer /////////////////////////////
-
 
     .footer__container {
         flex-direction: row-reverse;
@@ -369,8 +311,6 @@ body {
             .mentions {
                 margin-left: 40px;
             }
-
-
         }
 
         .footer__logo {
@@ -383,9 +323,5 @@ body {
                 height: 15px;
             }
         }
-
     }
-
-
-
 }
