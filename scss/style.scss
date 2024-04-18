@@ -306,16 +306,29 @@ a {
 
                 .card__icon {
 
-                    //
                     .fa-heart {
+
                         position: absolute;
                         bottom: 30px;
                         right: 20px;
                         font-size: 1.4em;
                         color: black;
-
-
                     }
+
+                    .card__icon-full {
+                        .fa-heart {
+                            display: none;
+                            position: absolute;
+                            bottom: 30px;
+                            right: 20px;
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+
+                .card__icon:hover .card__icon-full .fa-heart {
+                    display: block;
+                    /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
                 }
             }
         }

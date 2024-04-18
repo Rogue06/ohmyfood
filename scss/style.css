@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -246,6 +247,17 @@ a {
   right: 20px;
   font-size: 1.4em;
   color: black;
+}
+.restaurants .container .card .card__content .card__icon .card__icon-full .fa-heart {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-size: 1.4em;
+}
+.restaurants .container .card .card__content .card__icon:hover .card__icon-full .fa-heart {
+  display: block;
+  /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
 }
 
 .footer__container {
