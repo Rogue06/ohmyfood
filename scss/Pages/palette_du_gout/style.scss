@@ -255,17 +255,12 @@ body {
 
 // Menu Checker /////////////////////////
 
-
-
-
-
-
 .menu__checker {
     position: absolute;
-    right: -20%; // Cachée par défaut
+    right: -20%;
     top: 0;
     height: 100%;
-    width: 18%;
+    width: 15%; // taille width check effect 
     transform: translateY(0);
     color: $tertiary-green;
     opacity: 1;
@@ -291,7 +286,7 @@ body {
     .fa-circle-check {
         font-family: "Font Awesome 5 Free"; // Font Awesome
         font-weight: 900;
-        font-size: 34px;
+        font-size: 24px;
         color: white; // Couleur de l'icône check
         position: absolute;
         top: 50%;
@@ -335,16 +330,13 @@ body {
     .text-content__menu {
         width: 100%;
         transition-property: width;
-        /* Définir les propriétés à animer */
         transition-duration: 1s;
-        /* Durée de la transition */
         transition-timing-function: ease;
         /* Fonction de temporisation de la transition */
     }
 
     &:hover .text-content__menu {
-        width: calc(100% - 20%);
-        /*transition: width 1s ease; // Transition pour réduire la largeur*/
+        width: calc(100% - 20%); // Distance du prix 
     }
 }
 
