@@ -322,6 +322,13 @@ a {
                             bottom: 30px;
                             right: 20px;
                             font-size: 1.4em;
+                            @include purple-button;
+                            -webkit-background-clip: text;
+                            /* Utilisation de la couleur de texte pour le dégradé */
+                            background-clip: text;
+                            color: transparent;
+                            /* Rendre le texte transparent */
+                            animation: none;
                         }
                     }
                 }
@@ -329,6 +336,17 @@ a {
                 .card__icon:hover .card__icon-full .fa-heart {
                     display: block;
                     /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
+                    animation: myAnim 1.4s ease 0s 1 normal forwards;
+                }
+
+                @keyframes myAnim {
+                    0% {
+                        transform: scale(0.5);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
                 }
             }
         }
