@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -170,76 +171,103 @@ body .restaurants__title .fa-heart {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.card-1 {
-  position: relative;
-  overflow: hidden;
-}
-.card-1:hover .menu__checker {
-  opacity: 1;
-  right: 0;
-}
-.card-1:hover .menu__checker::after {
-  background-color: #99e2d0;
-}
-.card-1:hover .text-content__menu {
-  width: 90%;
-  transition: width 0.8s ease;
-}
-
 .menu__checker {
   position: absolute;
-  right: -10%;
+  right: -20%;
   top: 0;
   height: 100%;
   width: 18%;
   transform: translateY(0);
   color: #99E2D0;
-  opacity: 0;
-  transition: all 0.8s ease;
+  opacity: 1;
+  transition: all 1s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .menu__checker::after {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 24px;
-  color: white;
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(153, 226, 208, 0);
-  transition: background-color 0.3s ease;
+  background-color: #99e2d0;
+  transition: background-color 1s ease-in-out;
   z-index: -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.menu__checker .fa-circle-check {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 34px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: transform 1s ease;
 }
 
-.card-1 {
+.card-1:hover .menu__checker .fa-circle-check {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.card-2:hover .menu__checker .fa-circle-check {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.card-3:hover .menu__checker .fa-circle-check {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.entrees .card,
+.plats .card,
+.desserts .card,
+.card-1,
+.card-2,
+.card-3 {
   position: relative;
   overflow: hidden;
 }
-.card-1:hover .menu__checker {
+.entrees .card:hover .menu__checker,
+.plats .card:hover .menu__checker,
+.desserts .card:hover .menu__checker,
+.card-1:hover .menu__checker,
+.card-2:hover .menu__checker,
+.card-3:hover .menu__checker {
   opacity: 1;
   right: 0;
 }
-.card-1:hover .menu__checker::after {
+.entrees .card:hover .menu__checker::after,
+.plats .card:hover .menu__checker::after,
+.desserts .card:hover .menu__checker::after,
+.card-1:hover .menu__checker::after,
+.card-2:hover .menu__checker::after,
+.card-3:hover .menu__checker::after {
   background-color: #99e2d0;
 }
-.card-1:hover .menu__checker i.fa-circle-check {
-  transform: rotate(360deg);
+.entrees .card .text-content__menu,
+.plats .card .text-content__menu,
+.desserts .card .text-content__menu,
+.card-1 .text-content__menu,
+.card-2 .text-content__menu,
+.card-3 .text-content__menu {
+  width: 100%;
+  transition-property: width;
+  /* Définir les propriétés à animer */
+  transition-duration: 1s;
+  /* Durée de la transition */
+  transition-timing-function: ease;
+  /* Fonction de temporisation de la transition */
 }
-.card-1:hover .text-content__menu {
+.entrees .card:hover .text-content__menu,
+.plats .card:hover .text-content__menu,
+.desserts .card:hover .text-content__menu,
+.card-1:hover .text-content__menu,
+.card-2:hover .text-content__menu,
+.card-3:hover .text-content__menu {
   width: 80%;
-  transition: width 0.3s ease;
-}
-
-.card__price {
-  transition: transform 0.8s ease;
+  /*transition: width 1s ease; // Transition pour réduire la largeur*/
 }
 
 .footer__container {

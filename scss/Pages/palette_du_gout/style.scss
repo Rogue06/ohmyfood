@@ -258,64 +258,67 @@ body {
 
 
 
-.card-1 {
-    position: relative;
-    overflow: hidden;
 
-    // Votre code existant pour .card-1
-
-    &:hover .menu__checker {
-        opacity: 1;
-        right: 0;
-
-        // Afficher le fond vert
-        &::after {
-            background-color: rgba($tertiary-green, 1); // Fond vert opaque
-        }
-    }
-
-    &:hover .text-content__menu {
-        width: calc(100% - 10%);
-        transition: width 0.8s ease; // Ajout de la transition pour réduire la largeur
-    }
-}
 
 .menu__checker {
     position: absolute;
-    right: -10%; // Cachée par défaut
+    right: -20%; // Cachée par défaut
     top: 0;
     height: 100%;
     width: 18%;
     transform: translateY(0);
     color: $tertiary-green;
-    opacity: 0;
-    transition: all 0.8s ease; // Transition pour l'opacité et la position
+    opacity: 1;
+    transition: all 1s ease; // Transition pour l'opacité et la position
     display: flex;
     align-items: center;
     justify-content: center;
 
     // Ajout du fond vert
     &::after {
-        content: '\f058'; // Code de l'icône check
-        font-family: "Font Awesome 5 Free"; // Font Awesome
-        font-weight: 900;
-        font-size: 24px;
-        color: white; // Couleur de l'icône check
+        content: ''; // Pas de contenu pour le fond vert
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($tertiary-green, 0); // Fond vert transparent
-        transition: background-color 0.3s ease; // Transition de la couleur du fond
+        background-color: rgba($tertiary-green, 1); // Fond vert transparent
+        transition: background-color 1s ease-in-out; // Transition de la couleur du fond
         z-index: -1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    }
+
+    // Icône check
+    .fa-circle-check {
+        font-family: "Font Awesome 5 Free"; // Font Awesome
+        font-weight: 900;
+        font-size: 34px;
+        color: white; // Couleur de l'icône check
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(180deg); // Positionnement au centre et rotation
+        transition: transform 1s ease; // Transition de la rotation seulement
     }
 }
 
-.card-1 {
+.card-1:hover .menu__checker .fa-circle-check {
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
+}
+
+.card-2:hover .menu__checker .fa-circle-check {
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
+}
+
+.card-3:hover .menu__checker .fa-circle-check {
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
+}
+
+.entrees .card,
+.plats .card,
+.desserts .card,
+.card-1,
+.card-2,
+.card-3 {
     position: relative;
     overflow: hidden;
 
@@ -327,37 +330,23 @@ body {
         &::after {
             background-color: rgba($tertiary-green, 1); // Fond vert opaque   
         }
+    }
 
-        i.fa-circle-check {
-            transform: rotate(360deg); // Rotation de l'icone check
-        }
+    .text-content__menu {
+        width: 100%;
+        transition-property: width;
+        /* Définir les propriétés à animer */
+        transition-duration: 1s;
+        /* Durée de la transition */
+        transition-timing-function: ease;
+        /* Fonction de temporisation de la transition */
     }
 
     &:hover .text-content__menu {
         width: calc(100% - 20%);
-        transition: width 0.3s ease; // Transition pour réduire la largeur
+        /*transition: width 1s ease; // Transition pour réduire la largeur*/
     }
 }
-
-.card__price {
-    transition: transform 0.8s ease; // Transition pour le déplacement du prix
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Footer ///////////////////////////////
 
@@ -384,8 +373,6 @@ body {
         .prop-restaurant {
             margin-left: 5px;
         }
-
-
 
         .fa-utensils,
         .fa-handshake-angle {
