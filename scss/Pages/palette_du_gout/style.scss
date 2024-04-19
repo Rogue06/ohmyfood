@@ -11,6 +11,7 @@ $section-background: #F6F6F6;
 $icon-color :#7E7E7E;
 $footer-color: #353535;
 
+// Imports ///////////////////
 
 
 // Mixins ////////////////////
@@ -54,6 +55,8 @@ $footer-color: #353535;
     font-style: normal;
     font-size: 28px;
 }
+
+
 
 * {
     font-family: "Roboto", sans-serif;
@@ -140,10 +143,8 @@ body {
 
             color: black;
             font-size: 24px;
-
         }
     }
-
 }
 
 
@@ -339,6 +340,62 @@ body {
         width: calc(100% - 20%); // Distance du prix 
     }
 }
+
+// Like /////////////////////////////////
+
+.section__icon-full {
+    position: relative; // Assurez-vous que la position est relative pour que les éléments absolus à l'intérieur puissent être positionnés correctement
+
+    .fa-heart {
+        position: absolute;
+        bottom: 1px;
+        font-size: 1.5em;
+        color: black;
+        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluide
+
+    }
+
+    .fa-solid.fa-heart {
+        color: transparent;
+    }
+
+    &:hover {
+        .fa-regular.fa-heart {
+            display: none; // Masque l'icône de cœur régulier au survol
+        }
+
+        .fa-solid.fa-heart {
+            display: block; // Affiche l'icône de cœur solide au survol
+            background: linear-gradient(180deg, $secondary-pink 10%, $primary-purple 90%);
+            -webkit-background-clip: text;
+            /* Utilisation de la couleur de texte pour le dégradé */
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    &:hover .fa-heart {
+        animation: myAnim 0.6s ease 0s 1 normal forwards;
+    }
+}
+
+
+@keyframes myAnim {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+
 
 // Footer ///////////////////////////////
 

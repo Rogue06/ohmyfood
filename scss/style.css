@@ -253,7 +253,7 @@ a {
   position: absolute;
   bottom: 30px;
   right: 20px;
-  font-size: 1.4em;
+  font-size: 1.5em;
   background: linear-gradient(180deg, #FF79DA 10%, #9356DC 90%);
   -webkit-background-clip: text;
   /* Utilisation de la couleur de texte pour le dégradé */
@@ -265,14 +265,17 @@ a {
 .restaurants .container .card .card__content .card__icon:hover .card__icon-full .fa-heart {
   display: block;
   /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
-  animation: myAnim 1.4s ease 0s 1 normal forwards;
+  animation: myAnim 0.6s ease 0s 1 normal forwards;
 }
 @keyframes myAnim {
   0% {
     transform: scale(0.5);
   }
+  50% {
+    transform: scale(1.4);
+  }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 

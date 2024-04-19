@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -266,6 +267,45 @@ body .restaurants__title .fa-heart {
   width: 80%;
 }
 
+.section__icon-full {
+  position: relative;
+}
+.section__icon-full .fa-heart {
+  position: absolute;
+  bottom: 1px;
+  font-size: 1.5em;
+  color: black;
+  transition: color 0.3s ease;
+}
+.section__icon-full .fa-solid.fa-heart {
+  color: transparent;
+}
+.section__icon-full:hover .fa-regular.fa-heart {
+  display: none;
+}
+.section__icon-full:hover .fa-solid.fa-heart {
+  display: block;
+  background: linear-gradient(180deg, #FF79DA 10%, #9356DC 90%);
+  -webkit-background-clip: text;
+  /* Utilisation de la couleur de texte pour le dégradé */
+  background-clip: text;
+  color: transparent;
+}
+.section__icon-full:hover .fa-heart {
+  animation: myAnim 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .footer__container {
   background-color: #353535;
   padding: 20px;
