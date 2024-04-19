@@ -351,8 +351,7 @@ body {
         bottom: 1px;
         font-size: 1.5em;
         color: black;
-        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluide
-
+        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluides
     }
 
     .fa-solid.fa-heart {
@@ -379,7 +378,6 @@ body {
     }
 }
 
-
 @keyframes myAnim {
     0% {
         transform: scale(0.5);
@@ -393,9 +391,6 @@ body {
         transform: scale(1.1);
     }
 }
-
-
-
 
 // Footer ///////////////////////////////
 

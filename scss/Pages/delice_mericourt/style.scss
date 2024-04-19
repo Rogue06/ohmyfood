@@ -11,6 +11,8 @@ $section-background: #F6F6F6;
 $icon-color :#7E7E7E;
 $footer-color: #353535;
 
+// Imports ///////////////////
+
 
 // Mixins ////////////////////
 
@@ -46,12 +48,15 @@ $footer-color: #353535;
 }
 
 // fonts
+
 @mixin shrinkland {
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 28px;
 }
+
+
 
 * {
     font-family: "Roboto", sans-serif;
@@ -76,15 +81,20 @@ a {
 }
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////
+
 
 .nav__container {
     display: flex;
     justify-content: center;
 
+
     .logo {
         height: 30px;
         margin: 20px 0 20px 0;
+
     }
 
     .fa-arrow-left {
@@ -93,11 +103,13 @@ a {
         left: 30px;
         margin-top: 20px;
         color: black;
+
     }
 }
 
 body {
     background-color: $section-background;
+
 
     h2 {
         @include shrinkland;
@@ -118,13 +130,17 @@ body {
         margin-top: -30px;
     }
 
+
+
     .restaurants__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: 10px;
 
+
         .fa-heart {
+
             color: black;
             font-size: 24px;
         }
@@ -132,7 +148,9 @@ body {
 }
 
 
+
 // Menus ////////////////////////////////
+
 
 .border__title {
     height: 3px;
@@ -141,12 +159,16 @@ body {
     margin-bottom: 10px;
 }
 
+
 .menu__title {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 300;
     margin: 40px 0 5px 0;
+
 }
+
+
 
 .cards__entrees,
 .cards__plats,
@@ -155,14 +177,17 @@ body {
     flex-direction: column;
     gap: 20px;
 
+
     .card-1,
     .card-2,
-    .card-3,
-    .card-4 {
+    .card-3 {
         @include cards-effects;
         background-color: white;
         padding: 15px 0 15px 15px;
+
+
     }
+
 
     .text-content__menu {
         /* gestion hide ...*/
@@ -170,6 +195,10 @@ body {
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: calc(100% - 15px); // Réduire la largeur pour permettre les points de suspension
+
+
+
+
 
         .bloc-text__menu {
             display: flex;
@@ -191,16 +220,24 @@ body {
             align-items: center;
             margin-top: 5px;
 
+
+
+
             .card__description {
                 font-weight: 300;
                 /* gestion hide ...*/
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+
+
             }
         }
     }
+
 }
+
+
 
 .button__container {
     display: flex;
@@ -265,11 +302,11 @@ body {
 }
 
 .card-2:hover .menu__checker .fa-circle-check {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
 .card-3:hover .menu__checker .fa-circle-check {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
 .entrees .card,
@@ -304,6 +341,57 @@ body {
     }
 }
 
+// Like /////////////////////////////////
+
+.section__icon-full {
+    position: relative; // Assurez-vous que la position est relative pour que les éléments absolus à l'intérieur puissent être positionnés correctement
+
+    .fa-heart {
+        position: absolute;
+        bottom: 1px;
+        font-size: 1.5em;
+        color: black;
+        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluides
+    }
+
+    .fa-solid.fa-heart {
+        color: transparent;
+    }
+
+    &:hover {
+        .fa-regular.fa-heart {
+            display: none; // Masque l'icône de cœur régulier au survol
+        }
+
+        .fa-solid.fa-heart {
+            display: block; // Affiche l'icône de cœur solide au survol
+            background: linear-gradient(180deg, $secondary-pink 10%, $primary-purple 90%);
+            -webkit-background-clip: text;
+            /* Utilisation de la couleur de texte pour le dégradé */
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    &:hover .fa-heart {
+        animation: myAnim 0.6s ease 0s 1 normal forwards;
+    }
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 // Footer ///////////////////////////////
 
 .footer__container {
@@ -316,9 +404,11 @@ body {
         width: 120px;
         height: 20px;
         margin-bottom: 15px;
+
     }
 
     .footer__logo-text {
+
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -343,6 +433,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+
     * {
         margin: 0;
         padding: 0;
@@ -351,6 +442,7 @@ body {
     html {
         max-width: 100%;
     }
+
 
     body {
         background-color: white;
@@ -382,7 +474,9 @@ body {
         left: 30%;
     }
 
+
     // Footer /////////////////////////////
+
 
     .footer__container {
         flex-direction: row-reverse;
@@ -397,6 +491,8 @@ body {
             .mentions {
                 margin-left: 40px;
             }
+
+
         }
 
         .footer__logo {
@@ -409,5 +505,9 @@ body {
                 height: 15px;
             }
         }
+
     }
+
+
+
 }

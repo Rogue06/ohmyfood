@@ -11,6 +11,8 @@ $section-background: #F6F6F6;
 $icon-color :#7E7E7E;
 $footer-color: #353535;
 
+// Imports ///////////////////
+
 
 // Mixins ////////////////////
 
@@ -40,6 +42,7 @@ $footer-color: #353535;
 //Les pourcentages 10% et 90% indiquent où les couleurs commencent et finissent dans le gradient.
 
 @mixin cards-effects {
+
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
@@ -52,6 +55,8 @@ $footer-color: #353535;
     font-style: normal;
     font-size: 28px;
 }
+
+
 
 * {
     font-family: "Roboto", sans-serif;
@@ -76,15 +81,20 @@ a {
 }
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////
+
 
 .nav__container {
     display: flex;
     justify-content: center;
 
+
     .logo {
         height: 30px;
         margin: 20px 0 20px 0;
+
     }
 
     .fa-arrow-left {
@@ -93,6 +103,7 @@ a {
         left: 30px;
         margin-top: 20px;
         color: black;
+
     }
 }
 
@@ -124,14 +135,19 @@ body {
         align-items: center;
         margin-right: 10px;
 
+
         .fa-heart {
+
             color: black;
             font-size: 24px;
         }
     }
 }
 
+
+
 // Menus ////////////////////////////////
+
 
 .border__title {
     height: 3px;
@@ -140,12 +156,16 @@ body {
     margin-bottom: 10px;
 }
 
+
 .menu__title {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 300;
     margin: 40px 0 5px 0;
+
 }
+
+
 
 .cards__entrees,
 .cards__plats,
@@ -153,6 +173,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 
     .card-1,
     .card-2,
@@ -162,6 +183,7 @@ body {
         background-color: white;
         padding: 15px 0 15px 15px;
     }
+
 
     .text-content__menu {
         /* gestion hide ...*/
@@ -190,16 +212,24 @@ body {
             align-items: center;
             margin-top: 5px;
 
+
+
+
             .card__description {
                 font-weight: 300;
                 /* gestion hide ...*/
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+
+
             }
         }
     }
+
 }
+
+
 
 .button__container {
     display: flex;
@@ -264,15 +294,15 @@ body {
 }
 
 .card-2:hover .menu__checker .fa-circle-check {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
 .card-3:hover .menu__checker .fa-circle-check {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
 .card-4:hover .menu__checker .fa-circle-check {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
 .entrees .card,
@@ -308,54 +338,61 @@ body {
     }
 }
 
-.card__icon {
+// Like /////////////////////////////////
+
+.section__icon-full {
+    position: relative; // Assurez-vous que la position est relative pour que les éléments absolus à l'intérieur puissent être positionnés correctement
 
     .fa-heart {
-
         position: absolute;
-        bottom: 30px;
-        right: 20px;
-        font-size: 1.4em;
+        bottom: 1px;
+        font-size: 1.5em;
         color: black;
+        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluide
+
     }
 
-    .card__icon-full {
-        .fa-heart {
-            display: none;
-            position: absolute;
-            bottom: 30px;
-            right: 20px;
-            font-size: 1.4em;
-            @include purple-button;
+    .fa-solid.fa-heart {
+        color: transparent;
+    }
+
+    &:hover {
+        .fa-regular.fa-heart {
+            display: none; // Masque l'icône de cœur régulier au survol
+        }
+
+        .fa-solid.fa-heart {
+            display: block; // Affiche l'icône de cœur solide au survol
+            background: linear-gradient(180deg, $secondary-pink 10%, $primary-purple 90%);
             -webkit-background-clip: text;
             /* Utilisation de la couleur de texte pour le dégradé */
             background-clip: text;
             color: transparent;
-            /* Rendre le texte transparent */
-            animation: none;
         }
+    }
+
+    &:hover .fa-heart {
+        animation: myAnim 0.6s ease 0s 1 normal forwards;
     }
 }
 
-.card__icon:hover .card__icon-full .fa-heart {
-    display: block;
-    /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
-    animation: myAnim 1.4s ease 0s 1 normal forwards;
-}
 
 @keyframes myAnim {
     0% {
         transform: scale(0.5);
     }
 
+    50% {
+        transform: scale(1.4);
+    }
+
     100% {
-        transform: scale(1);
+        transform: scale(1.1);
     }
 }
-}
-}
-}
-}
+
+
+
 
 // Footer ///////////////////////////////
 
@@ -369,9 +406,11 @@ body {
         width: 120px;
         height: 20px;
         margin-bottom: 15px;
+
     }
 
     .footer__logo-text {
+
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -385,6 +424,7 @@ body {
         .fa-handshake-angle {
             margin-right: 5px;
             font-size: 0.8em;
+
         }
 
         a {
@@ -395,6 +435,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+
     * {
         margin: 0;
         padding: 0;
@@ -403,6 +444,7 @@ body {
     html {
         max-width: 100%;
     }
+
 
     body {
         background-color: white;
@@ -434,7 +476,9 @@ body {
         left: 30%;
     }
 
+
     // Footer /////////////////////////////
+
 
     .footer__container {
         flex-direction: row-reverse;
@@ -449,6 +493,8 @@ body {
             .mentions {
                 margin-left: 40px;
             }
+
+
         }
 
         .footer__logo {
@@ -463,4 +509,7 @@ body {
         }
 
     }
+
+
+
 }
