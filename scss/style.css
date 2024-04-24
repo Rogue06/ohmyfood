@@ -13,6 +13,103 @@ html {
   margin-right: auto;
 }
 
+/* Styles pour le loader */
+.loader__container {
+  position: fixed;
+  /* Positionne le loader de manière fixe */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: hideLoader 3s forwards;
+  /* animation, supprime le loader apres 3s */
+}
+.loader__container .loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  color: #9356DC;
+  opacity: 1;
+}
+.loader__container h1 {
+  font-size: 30px;
+  font-family: roboto, sans-serif;
+}
+
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Styles pour le contenu */
+.content {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+svg.tea {
+  --secondary: #FF79DA;
+  transform: scale(3);
+}
+svg.tea #teabag {
+  transform-origin: top center;
+  transform: rotate(3deg);
+  animation: swing 2s infinite;
+}
+svg.tea #steamL {
+  stroke-dasharray: 13;
+  stroke-dashoffset: 13;
+  animation: steamLarge 2s infinite;
+}
+svg.tea #steamR {
+  stroke-dasharray: 9;
+  stroke-dashoffset: 9;
+  animation: steamSmall 2s infinite;
+}
+
+@keyframes swing {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+@keyframes steamLarge {
+  0% {
+    stroke-dashoffset: 13;
+    opacity: 0.6;
+  }
+  100% {
+    stroke-dashoffset: 39;
+    opacity: 0;
+  }
+}
+@keyframes steamSmall {
+  10% {
+    stroke-dashoffset: 9;
+    opacity: 0.6;
+  }
+  80% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 27;
+    opacity: 0;
+  }
+}
 h2 {
   font-size: 24px;
 }

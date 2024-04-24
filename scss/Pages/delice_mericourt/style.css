@@ -267,6 +267,32 @@ body .restaurants__title .fa-heart {
   width: 80%;
 }
 
+.entrees .card-1,
+.plats .card-1,
+.desserts .card-1 {
+  animation: menuAnim 1.5s ease 0s 1 normal forwards;
+}
+.entrees .card-2,
+.plats .card-2,
+.desserts .card-2 {
+  animation: menuAnim 1s ease 0s 1 normal forwards;
+}
+.entrees .card-3,
+.plats .card-3,
+.desserts .card-3 {
+  animation: menuAnim 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes menuAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .section__icon-full {
   position: relative;
 }
