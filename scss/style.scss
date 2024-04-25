@@ -87,7 +87,7 @@ html {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 24px;
         font-family: roboto, sans-serif;
     }
 }
@@ -376,6 +376,8 @@ a {
             border-radius: 20px;
             @include cards-effects;
             position: relative;
+            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
 
             img {
                 border-radius: 20px 20px 0 0;
@@ -453,6 +455,7 @@ a {
                     animation: myAnim 0.6s ease 0s 1 normal forwards;
                 }
 
+
                 @keyframes myAnim {
                     0% {
                         transform: scale(0.5);
@@ -470,7 +473,6 @@ a {
         }
     }
 }
-
 
 // Footer ///////////////////////////////
 
@@ -510,7 +512,6 @@ a {
         }
     }
 }
-
 
 // Version desktop ///////////////////////////////
 

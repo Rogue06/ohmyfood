@@ -332,6 +332,21 @@ body .restaurants__title .fa-heart {
     transform: scale(1.1);
   }
 }
+.section__icon-full input[type=checkbox]:checked + .fa-heart {
+  animation: reverseAnim 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes reverseAnim {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
 .footer__container {
   background-color: #353535;
   padding: 20px;
