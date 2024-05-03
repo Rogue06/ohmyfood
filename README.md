@@ -1,3 +1,5 @@
 <h1>Projet ohMyFood</h1>
 
-<img src="https://user.oc-static.com/upload/2022/06/22/16559016787093_Untitled%20design.png)" alt="photo Ohmyfood version mobile et desktop">
+![image](https://github.com/Rogue06/ohmyfood/assets/111644419/2dcef3b6-a98f-4ce7-8498-ffa18b23918e)
+
+
