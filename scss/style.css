@@ -301,8 +301,6 @@ a {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   position: relative;
-  transition: background-color 0.3s ease;
-  transition: all 0.3s ease;
 }
 .restaurants .container .card img {
   border-radius: 20px 20px 0 0;
@@ -358,7 +356,7 @@ a {
   /* Utilisation de la couleur de texte pour le dégradé */
   background-clip: text;
   color: transparent;
-  /* Rendre le texte transparent */
+  /* Rendre la couleur de texte transparent */
   animation: none;
 }
 .restaurants .container .card .card__content .card__icon:hover .card__icon-full .fa-heart {

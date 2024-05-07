@@ -52,7 +52,7 @@ body .banner__restaurant img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .a_la_francaise__section {
+body .note-enchantee__section, body .palette_du_gout__section, body .delice-des-sens__section, body .a_la_francaise__section {
   padding: 20px 20px 0 15px;
   background-color: #F6F6F6;
   width: 100%;
@@ -95,12 +95,15 @@ body .restaurants__title .fa-heart {
 .cards__entrees .card-1,
 .cards__entrees .card-2,
 .cards__entrees .card-3,
+.cards__entrees .card-4,
 .cards__plats .card-1,
 .cards__plats .card-2,
 .cards__plats .card-3,
+.cards__plats .card-4,
 .cards__desserts .card-1,
 .cards__desserts .card-2,
-.cards__desserts .card-3 {
+.cards__desserts .card-3,
+.cards__desserts .card-4 {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   background-color: white;
@@ -220,12 +223,17 @@ body .restaurants__title .fa-heart {
   transform: translate(-50%, -50%) rotate(360deg);
 }
 
+.card-4:hover .menu__checker .fa-circle-check {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+
 .entrees .card,
 .plats .card,
 .desserts .card,
 .card-1,
 .card-2,
-.card-3 {
+.card-3,
+.card-4 {
   position: relative;
   overflow: hidden;
 }
@@ -234,7 +242,8 @@ body .restaurants__title .fa-heart {
 .desserts .card:hover .menu__checker,
 .card-1:hover .menu__checker,
 .card-2:hover .menu__checker,
-.card-3:hover .menu__checker {
+.card-3:hover .menu__checker,
+.card-4:hover .menu__checker {
   opacity: 1;
   right: 0;
 }
@@ -243,7 +252,8 @@ body .restaurants__title .fa-heart {
 .desserts .card:hover .menu__checker::after,
 .card-1:hover .menu__checker::after,
 .card-2:hover .menu__checker::after,
-.card-3:hover .menu__checker::after {
+.card-3:hover .menu__checker::after,
+.card-4:hover .menu__checker::after {
   background-color: #99e2d0;
 }
 .entrees .card .text-content__menu,
@@ -251,7 +261,8 @@ body .restaurants__title .fa-heart {
 .desserts .card .text-content__menu,
 .card-1 .text-content__menu,
 .card-2 .text-content__menu,
-.card-3 .text-content__menu {
+.card-3 .text-content__menu,
+.card-4 .text-content__menu {
   width: 100%;
   transition-property: width;
   transition-duration: 1s;
@@ -263,23 +274,29 @@ body .restaurants__title .fa-heart {
 .desserts .card:hover .text-content__menu,
 .card-1:hover .text-content__menu,
 .card-2:hover .text-content__menu,
-.card-3:hover .text-content__menu {
+.card-3:hover .text-content__menu,
+.card-4:hover .text-content__menu {
   width: 80%;
 }
 
 .entrees .card-1,
 .plats .card-1,
 .desserts .card-1 {
-  animation: menuAnim 1.5s ease 0s 1 normal forwards;
+  animation: menuAnim 2s ease 0s 1 normal forwards;
 }
 .entrees .card-2,
 .plats .card-2,
 .desserts .card-2 {
-  animation: menuAnim 1s ease 0s 1 normal forwards;
+  animation: menuAnim 1.5s ease 0s 1 normal forwards;
 }
 .entrees .card-3,
 .plats .card-3,
 .desserts .card-3 {
+  animation: menuAnim 1s ease 0s 1 normal forwards;
+}
+.entrees .card-4,
+.plats .card-4,
+.desserts .card-4 {
   animation: menuAnim 0.5s ease 0s 1 normal forwards;
 }
 
@@ -370,10 +387,11 @@ body .restaurants__title .fa-heart {
   html {
     max-width: 100%;
   }
+  /* Styles spécifiques à la page note enchantée */
   body {
     background-color: white;
   }
-  body .a_la_francaise__section {
+  body .note-enchantee__section, body .palette_du_gout__section, body .delice-des-sens__section, body .a_la_francaise__section {
     width: 70%;
     padding-bottom: 5px;
     position: relative;

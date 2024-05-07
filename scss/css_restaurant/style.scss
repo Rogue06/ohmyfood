@@ -110,7 +110,6 @@ a {
 body {
     background-color: $section-background;
 
-
     h2 {
         @include shrinkland;
     }
@@ -121,7 +120,7 @@ body {
         object-fit: cover;
     }
 
-    .palette_du_gout__section {
+    .note-enchantee__section, .palette_du_gout__section, .delice-des-sens__section, .a_la_francaise__section {
         padding: 20px 20px 0 15px;
         background-color: $section-background;
         width: 100%;
@@ -129,8 +128,6 @@ body {
         position: relative;
         margin-top: -30px;
     }
-
-
 
     .restaurants__title {
         display: flex;
@@ -180,12 +177,11 @@ body {
 
     .card-1,
     .card-2,
-    .card-3 {
+    .card-3,
+    .card-4 {
         @include cards-effects;
         background-color: white;
         padding: 15px 0 15px 15px;
-
-
     }
 
 
@@ -195,10 +191,6 @@ body {
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: calc(100% - 15px); // Réduire la largeur pour permettre les points de suspension
-
-
-
-
 
         .bloc-text__menu {
             display: flex;
@@ -309,12 +301,17 @@ body {
     transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
 }
 
+.card-4:hover .menu__checker .fa-circle-check {
+    transform: translate(-50%, -50%) rotate(360deg); // Rotation de l'icône check au survol
+}
+
 .entrees .card,
 .plats .card,
 .desserts .card,
 .card-1,
 .card-2,
-.card-3 {
+.card-3,
+.card-4 {
     position: relative;
     overflow: hidden;
 
@@ -347,14 +344,18 @@ body {
 .desserts {
 
     .card-1 {
-        animation: menuAnim 1.5s ease 0s 1 normal forwards;
+        animation: menuAnim 2s ease 0s 1 normal forwards;
     }
 
     .card-2 {
-        animation: menuAnim 1s ease 0s 1 normal forwards;
+        animation: menuAnim 1.5s ease 0s 1 normal forwards;
     }
 
     .card-3 {
+        animation: menuAnim 1s ease 0s 1 normal forwards;
+    }
+
+    .card-4 {
         animation: menuAnim 0.5s ease 0s 1 normal forwards;
     }
 }
@@ -382,7 +383,8 @@ body {
         bottom: 1px;
         font-size: 1.5em;
         color: black;
-        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluides
+        transition: color 0.3s ease; // Ajoute une transition de couleur pour un effet de transition fluide
+
     }
 
     .fa-solid.fa-heart {
@@ -409,6 +411,7 @@ body {
     }
 }
 
+
 @keyframes myAnim {
     0% {
         transform: scale(0.5);
@@ -423,24 +426,7 @@ body {
     }
 }
 
-// Animation inverse
-.section__icon-full input[type="checkbox"]:checked+.fa-heart {
-    animation: reverseAnim 0.6s ease 0s 1 normal forwards;
-}
 
-@keyframes reverseAnim {
-    0% {
-        transform: scale(1.1);
-    }
-
-    50% {
-        transform: scale(1.4);
-    }
-
-    100% {
-        transform: scale(0.5);
-    }
-}
 
 
 // Footer ///////////////////////////////
@@ -494,11 +480,11 @@ body {
         max-width: 100%;
     }
 
-
+/* Styles spécifiques à la page note enchantée */
     body {
         background-color: white;
 
-        .palette_du_gout__section {
+        .note-enchantee__section, .palette_du_gout__section, .delice-des-sens__section, .a_la_francaise__section {
             width: 70%;
             padding-bottom: 5px;
             position: relative;
@@ -511,6 +497,7 @@ body {
         }
     }
 
+    
     .entrees,
     .plats,
     .desserts {

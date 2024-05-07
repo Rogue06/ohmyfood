@@ -10,7 +10,6 @@ $section-background: #F6F6F6;
 $icon-color :#7E7E7E;
 $footer-color: #353535;
 
-
 // Mixins ////////////////////
 
 // Button
@@ -29,20 +28,16 @@ $footer-color: #353535;
 //Les pourcentages 10% et 90% indiquent où les couleurs commencent et finissent dans le gradient.
 
 @mixin cards-effects {
-
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
-
 // fonts
-
 @mixin shrinkland {
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 28px;
 }
-
 * {
     font-family: "Roboto", sans-serif;
     margin: 0px;
@@ -50,16 +45,12 @@ $footer-color: #353535;
     box-sizing: border-box;
     font-size: 16px;
 }
-
 html {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
 }
-
 // Loader ////////////////////  
-
-
 /* Styles pour le loader */
 .loader__container {
     position: fixed;
@@ -75,7 +66,6 @@ html {
     background-color: transparentize($color: white, $amount: 0.1);
     animation: hideLoader 3s forwards;
     /* animation, supprime le loader apres 3s */
-
     .loader {
         display: flex;
         flex-direction: column;
@@ -85,105 +75,86 @@ html {
         color: $primary-purple;
         opacity: 1;
     }
-
     h1 {
         font-size: 24px;
         font-family: roboto, sans-serif;
     }
 }
-
 @keyframes hideLoader {
     0% {
         opacity: 1;
     }
-
     80% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
         visibility: hidden;
     }
 }
-
 /* Styles pour le contenu */
 .content {
     opacity: 1; // Changement de l'opacité à 1 pour afficher le contenu
     transition: opacity 1s ease; // Suppression du délai pour afficher le contenu immédiatement
 }
-
 svg.tea {
     --secondary: #FF79DA;
     transform: scale(3);
-
     #teabag {
         transform-origin: top center;
         transform: rotate(3deg);
         animation: swing 2s infinite;
     }
-
     #steamL {
         stroke-dasharray: 13;
         stroke-dashoffset: 13;
         animation: steamLarge 2s infinite;
     }
-
     #steamR {
         stroke-dasharray: 9;
         stroke-dashoffset: 9;
         animation: steamSmall 2s infinite;
     }
 }
-
 @keyframes swing {
     50% {
         transform: rotate(-3deg);
     }
 }
-
 @keyframes steamLarge {
     0% {
         stroke-dashoffset: 13;
         opacity: .6;
     }
-
     100% {
         stroke-dashoffset: 39;
         opacity: 0;
     }
 }
-
 @keyframes steamSmall {
     10% {
         stroke-dashoffset: 9;
         opacity: .6;
     }
-
     80% {
         stroke-dashoffset: 27;
         opacity: 0;
     }
-
     100% {
         stroke-dashoffset: 27;
         opacity: 0;
     }
 }
-
 // Loader end //////////////////////////
 h2 {
     font-size: 24px;
 }
-
 a {
     text-decoration: none;
 }
-
 .main__container {
     padding-top: 10px;
 }
-
 .logo {
     display: flex;
     justify-content: center;
@@ -192,11 +163,9 @@ a {
     position: relative;
     z-index: 2;
 }
-
 .logo img {
     padding-bottom: 10px;
 }
-
 .location__container {
     padding: 15px 0;
     display: flex;
@@ -206,40 +175,32 @@ a {
     position: relative;
     z-index: 1;
 }
-
 #restaurant-location {
     background-color: $background-location;
     width: 122px;
 }
-
 .search-bar {
     display: flex;
     flex-direction: row;
 }
-
 .fa-location-dot {
     margin-right: 15px;
 }
-
 .search-bar input[type="search"] {
     border: none;
 }
-
 .search-bar input[type="search"]::placeholder {
     color: black;
 }
-
 .search-bar input[type="search"]:focus {
     outline: none;
 }
-
 .section__book {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 300px;
     background-color: $section-background;
-
     .book__container {
         display: flex;
         flex-direction: column;
@@ -247,7 +208,6 @@ a {
         justify-content: center;
         flex-grow: 1;
         margin: 0 20px;
-
         .book__title {
             h2 {
                 text-align: center;
@@ -255,14 +215,12 @@ a {
                 margin: 0 0 10px 0;
             }
         }
-
         .book__text {
             text-align: center;
             font-size: 18px;
             font-weight: 300;
             margin: 0 0 20px 0;
         }
-
         .book__button {
             display: flex;
             justify-content: center;
@@ -277,11 +235,9 @@ a {
             transition: background-color 0.3s ease;
             box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease; // all pour inclure les transitions de l'ombre.
-
             &:hover {
                 @include purple-button--hover;
             }
-
             .button__text {
                 font-weight: 400;
                 font-size: 16px;
@@ -290,21 +246,16 @@ a {
         }
     }
 }
-
 // Section Fonctionnement 
-
 .instructions {
     margin: 40px 20px;
-
     &__title {
         margin: 20px 0;
     }
 }
-
 .steps__container {
     display: flex;
     flex-direction: column;
-
     .step__one,
     .step__two,
     .step__three {
@@ -312,9 +263,7 @@ a {
         background-color: $section-background;
         padding: 15px;
         margin: 10px;
-
         .step__numbers {
-
             background-color: $primary-purple;
             color: white;
             position: absolute;
@@ -324,12 +273,10 @@ a {
             transform: translateX(-115%) translateY(50%);
         }
     }
-
     .step__iconandtxt {
         display: flex;
         align-items: center;
         margin: 15px 20px;
-
         .step__text {
             margin-left: 20px;
             font-weight: 500;
@@ -338,53 +285,42 @@ a {
             white-space: nowrap;
         }
     }
-
     .fa-store {
         color: $primary-purple;
     }
-
     .fa-mobile-screen-button,
     .fa-list-ul {
         color: $icon-color;
     }
 }
-
 // restaurants section //////////////////////////////:
-
 .restaurants {
     background-color: $section-background;
     padding: 20px;
     padding-bottom: 80px;
-
     &__title {
         margin: 30px 0 20px 0;
     }
-
     .container {
         display: flex;
         flex-direction: column;
-
         .cards {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-
         .card {
             height: 251px;
             background-color: white;
             border-radius: 20px;
             @include cards-effects;
             position: relative;
-            
-
             img {
                 border-radius: 20px 20px 0 0;
                 width: 100%;
                 height: 180px;
                 object-fit: cover;
             }
-
             .card__label--1,
             .card__label--2,
             .card__label--3,
@@ -399,37 +335,29 @@ a {
                 top: 10px;
                 right: 20px;
             }
-
             .card__label--3,
             .card__label--4 {
                 visibility: hidden;
             }
-
             .card__content {
                 display: flex;
-
                 .card__txt {
                     padding: 0 0 10px 10px;
                     color: black;
                     position: relative;
-
                     h3 {
                         margin: 10px 0 5px 0;
                     }
                 }
-
                 // hover Heart effect
                 .card__icon {
-
                     .fa-heart {
-
                         position: absolute;
                         bottom: 30px;
                         right: 20px;
                         font-size: 1.4em;
                         color: black;
                     }
-
                     .card__icon-full {
                         .fa-heart {
                             display: none;
@@ -442,28 +370,23 @@ a {
                             /* Utilisation de la couleur de texte pour le dégradé */
                             background-clip: text;
                             color: transparent;
-                            /* Rendre le texte transparent */
+                            /* Rendre la couleur de texte transparent */
                             animation: none;
                         }
                     }
                 }
-
                 .card__icon:hover .card__icon-full .fa-heart {
                     display: block;
                     /* Affiche l'icône lorsque l'élément avec la classe .card__icon est survolé */
                     animation: myAnim 0.6s ease 0s 1 normal forwards;
                 }
-
-
                 @keyframes myAnim {
                     0% {
                         transform: scale(0.5);
                     }
-
                     50% {
                         transform: scale(1.4);
                     }
-
                     100% {
                         transform: scale(1.1);
                     }
@@ -472,81 +395,62 @@ a {
         }
     }
 }
-
 // Footer ///////////////////////////////
-
 .footer__container {
     display: flex;
     flex-direction: column;
     background-color: $footer-color;
     padding: 20px;
     display: flex;
-
     .footer__logo img {
         width: 120px;
         height: 20px;
         margin-bottom: 15px;
     }
-
     .footer__logo-text {
-
         display: flex;
         flex-direction: column;
         gap: 7px;
         color: white;
-
         .prop-restaurant {
             margin-left: 5px;
         }
-
         .fa-utensils,
         .fa-handshake-angle {
             margin-right: 5px;
             font-size: 0.8em;
         }
-
         a {
             text-decoration: none;
             color: white;
         }
     }
 }
-
 // Version desktop ///////////////////////////////
-
 @media screen and (min-width: 1024px) {
-
     * {
         margin: 0;
         padding: 0;
     }
-
     html {
         max-width: 100%;
     }
-
     .section__book {
         min-height: 150px;
-
         .book__container {
             justify-content: flex-start;
             margin: 30px;
-
             .book__title {
                 margin-bottom: 20px;
-
                 h2 {
                     font-size: 40px;
                 }
             }
-
             .book__button {
                 min-width: auto;
             }
         }
-
     }
-
     .instructions,
     .container {
         padding: 0 20px;
@@ -554,11 +458,9 @@ a {
         margin-left: auto;
         margin-right: auto;
     }
-
     .steps__container {
         flex-direction: row;
         gap: 50px;
-
         .step__one,
         .step__two,
         .step__three {
@@ -568,11 +470,9 @@ a {
             max-width: none;
         }
     }
-
     .restaurants {
         padding: 0;
         padding-bottom: 30px;
-
         .container {
             .cards {
                 display: grid;
@@ -585,33 +485,21 @@ a {
             }
         }
     }
-
-
-
-
     // Footer /////////////////////////////
-
-
     .footer__container {
         flex-direction: row-reverse;
         align-items: center;
         height: 110px;
         padding-top: 60px;
-
         .footer__logo-text {
             flex-direction: row;
             gap: 10px;
-
             .mentions {
                 margin-left: 40px;
             }
-
-
         }
-
         .footer__logo {
             margin-top: 5px;
-
             img {
                 margin: 0;
                 margin-left: 60px;
@@ -619,7 +507,5 @@ a {
                 height: 15px;
             }
         }
-
-
     }
 }
